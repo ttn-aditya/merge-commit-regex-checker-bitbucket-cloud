@@ -1,0 +1,31 @@
+permissions:
+  scopes:
+    - read:pullrequest:bitbucket
+    - storage:app
+modules:
+  bitbucket:mergeCheck:
+    - key: check-pr-title
+      function: check-pull-request
+      name: Check PR Merge Commit Message
+      description: Check pull request merge commit contains a configured regex
+      triggers:
+        - on-merge
+  bitbucket:repoSettingsMenuPage:
+    - key: settings-page
+      resource: main
+      render: native
+      title: Check PR Merge Commit Message
+      resolver:
+        function: resolver
+  function:
+    - key: check-pull-request
+      handler: index.checkPullRequest
+    - key: resolver
+      handler: index.resolverHandler
+resources:
+  - key: main
+    path: src/frontend/index.tsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/def52383-e1b6-4553-ad3c-9618a73ded08

@@ -1,0 +1,32 @@
+{
+  "name": "forge-bitbucket-pull-request-title-validator",
+  "version": "0.0.0",
+  "description": "A Bitbucket Forge app to check if pull request title contains a configured string via custom merge checks",
+  "main": "index.js",
+  "license": "SEE LICENSE IN /LICENSE",
+  "scripts": {
+    "lint": "eslint --ext .ts src && prettier --check src/**/*.ts && tsc --noEmit",
+    "format": "eslint --ext .ts --fix src && prettier --write src/**/*.ts"
+  },
+  "dependencies": {
+    "@forge/api": "^2.18.0",
+    "@forge/bridge": "^3.3.0",
+    "@forge/cli": "^1.5.0",
+    "@forge/react": "^10.1.0",
+    "@forge/resolver": "^1.5.10",
+    "@forge/ui": "^1.11.1",
+    "forge": "^2.3.0",
+    "perf_hooks": "^0.0.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.16",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "prettier": "^3.1.0",
+    "typescript": "^5.2.2"
+  }
+}
