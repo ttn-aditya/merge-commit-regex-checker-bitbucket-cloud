@@ -1,0 +1,1 @@
+# merge-commit-regex-checker-bitbucket-cloud
